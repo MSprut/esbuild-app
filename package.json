@@ -1,0 +1,30 @@
+{
+  "name": "app",
+  "private": "true",
+  "dependencies": {
+    "@angular/animations": "^14.2.9",
+    "@angular/common": "^14.2.9",
+    "@angular/compiler": "^14.2.9",
+    "@angular/core": "^14.2.9",
+    "@angular/platform-browser": "^14.2.9",
+    "@angular/platform-browser-dynamic": "^14.2.9",
+    "@angular/router": "^14.2.9",
+    "@hotwired/stimulus": "^3.1.1",
+    "@hotwired/turbo-rails": "^7.2.4",
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.2",
+    "bootstrap-icons": "^1.9.1",
+    "esbuild": "^0.15.13",
+    "esbuild-rails": "^1.0.3",
+    "esbuild-sass-plugin": "^2.4.0",
+    "haml-loader": "^0.1.0",
+    "html-loader": "^4.2.0",
+    "jquery": "^3.6.1",
+    "rxjs": "^7.5.7",
+    "sass": "^1.56.0"
+  },
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "build:css": "sass ./app/assets/stylesheets/application.bootstrap.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
+  }
+}
