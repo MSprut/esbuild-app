@@ -2,6 +2,7 @@ const path = require('path')
 const rails = require('esbuild-rails')
 
 require("esbuild").build({
+  logLevel: "info",
   entryPoints: ["application.js"],
   bundle: true,
   outdir: path.join(process.cwd(), "app/assets/builds"),
@@ -10,4 +11,7 @@ require("esbuild").build({
   plugins: [
     rails()
   ],
+  loader: {
+    ".html": "text",
+  },
 }).catch(() => process.exit(1))
