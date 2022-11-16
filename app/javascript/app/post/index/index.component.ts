@@ -40,8 +40,8 @@ export class PostIndexComponent implements OnInit {
 		this.isNew = false;
 		this.postForm = this.fb.group({
 			id: [post.id],
-			name: [post.title],
-			age: [post.description],
+			title: [post.title],
+			description: [post.description],
 		});
 
 		this.modalRef = this.modalService.show(template);
@@ -79,9 +79,8 @@ export class PostIndexComponent implements OnInit {
 
 		this.postForm = this.fb.group({
 			id: [""],
-			name: [""],
-			age: [""],
-			address: [""],
+			title: [""],
+			description: [""],
 		});
 	}
 }
