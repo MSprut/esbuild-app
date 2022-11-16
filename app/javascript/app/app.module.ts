@@ -9,7 +9,10 @@ import { AppBootstrapModule } from "./app-bootstrap.module";
 import { PostIndexComponent } from "./post/index/index.component";
 
 @NgModule({
-	declarations: [AppComponent, PostIndexComponent],
+	declarations: [
+		AppComponent,
+		PostIndexComponent
+	],
 	imports: [
 		HttpClientModule,
 		AppRoutingModule,
@@ -19,6 +22,8 @@ import { PostIndexComponent } from "./post/index/index.component";
 		AppBootstrapModule,
 	],
 	providers: [],
-	bootstrap: [AppComponent],
+	bootstrap: [
+		AppComponent
+	],
 })
 export class AppModule {}
