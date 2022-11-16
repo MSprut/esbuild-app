@@ -1,0 +1,27 @@
+<h1 class="display-1">Posts</h1>
+<form #f="ngForm"
+      class="container add-form form-group"
+      (ngSubmit)="onSubmit(f)" novalidate>
+  <label>Add a new post</label>
+  <div>
+    <label>Title</label>
+    <input class="form-control"
+           name="title" ngModel required #first="ngModel">
+  </div>
+  <div>
+    <label>Content</label>
+    <input class="form-control"
+           name="content" ngModel required>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<div class="container"
+     *ngFor="let post of posts">
+  <div class="col">
+    <post class="post"
+          title="{{post.title}}"
+          content="{{post.content}}"
+          (change)="onRemovePost($event)">
+    </post>
+  </div>
+</div>

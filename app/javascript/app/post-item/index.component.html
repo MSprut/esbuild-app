@@ -1,0 +1,13 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <div class="container row">
+      <h5 class="col card-title">{{title}}</h5>
+      <button class="col btn btn-danger"
+            (click)="onRemovePostClick()">Remove</button>
+    </div>
+    <p class="card-text">{{content}}</p>
+    <like-box [numberOfLikes]="postLikes"
+              (change)="onPostLikesUpdate($event)">
+    </like-box>
+  </div>
+</div>

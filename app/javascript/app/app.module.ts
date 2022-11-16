@@ -1,29 +1,23 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
-import { HttpClientModule } from "@angular/common/http";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
-import { AppComponent } from "./app.component";
-import { AppRoutingModule } from "./app-routing.module";
-import { AppBootstrapModule } from "./app-bootstrap.module";
-import { PostIndexComponent } from "./post/index/index.component";
+import { AppComponent } from './posts/index.component';
+import { LikeComponent } from './like/index.component';
+import { PostComponent } from './post-item/index.component';
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		PostIndexComponent
-	],
-	imports: [
-		HttpClientModule,
-		AppRoutingModule,
+  imports: [
 		BrowserModule,
-		FormsModule,
-		ReactiveFormsModule,
-		AppBootstrapModule,
+		FormsModule
 	],
-	providers: [],
-	bootstrap: [
+  declarations: [
+		AppComponent,
+		LikeComponent,
+		PostComponent ],
+  bootstrap: [
 		AppComponent
-	],
+	]
 })
-export class AppModule {}
+export class AppModule { }
+
